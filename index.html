@@ -5,9 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>david</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ANDRIAMASINAVALONA</h1>
-    <h2>david</h2>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#acceuil">Acceuil</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <dv class="contenu">
+        <div id="acceuil">
+            acceuil
+        </div>
+        <div id="contact">
+            <form action="/action_page.php">
+                <label for="fname">Nom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Prenom</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="country">Pays</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+    </dv>
 </body>
 </html>
