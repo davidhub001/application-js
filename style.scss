@@ -69,7 +69,7 @@
 // }
 
 #calculatrice{
-    position: absolute;
+    position: relative;
     width: 400px;
     background-color: aquamarine;
     border: solid;
@@ -100,5 +100,19 @@
     }
     &:hover{
         cursor: pointer;
+    }
+}
+#game{
+    background-color: aquamarine;
+    position: relative;
+    border: solid;
+    span[robot="1"]{
+        background-color: red;
+        position: relative;
+    }
+    .block{
+        display: block;
+        position: absolute;
+        background-color: black;
     }
 }
