@@ -69,6 +69,7 @@
 // }
 
 #calculatrice{
+    position: absolute;
     width: 400px;
     background-color: aquamarine;
     border: solid;
@@ -96,5 +97,8 @@
             padding: 1px;
             margin: 2px;
         }
+    }
+    &:hover{
+        cursor: pointer;
     }
 }

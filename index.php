@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <div id="calculatrice">
+    <div id="calculatrice" class="deplacer">
         <div class="_button">
             <input type="text" name="entrer" id="entrer">
             <button class="button">1</button>
