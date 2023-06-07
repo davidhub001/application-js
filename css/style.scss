@@ -121,3 +121,26 @@ div#css {
     position: relative;
     border: solid;    
 }
+
+body.content-page{
+    background-color: #d7bcf7!important;
+    color: #000000!important;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: 'Whyte',Arial,Helvetica,sans-serif;
+    margin: 0px 40px 0px 40px;
+    .text-center{
+        text-align: center;
+    }
+    @for $i from 1 through 100{
+        .w-#{$i}{
+            width: $i * 1%;
+        }
+        .h-#{$i}{
+            height: $i * 1%;
+        }
+        .br-#{$i}{
+            border-radius: $i * 1%;
+        }
+    }
+}
