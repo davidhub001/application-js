@@ -21,6 +21,7 @@ document.addEventListener("mousemove",function(e){
         depl.style.position = "absolute";
         depl.style.left = _x+'px';
         depl.style.top = _y+'px';
+        depl.style.z_index= 10000;
     }
 })
 document.addEventListener("mouseup",function(e){

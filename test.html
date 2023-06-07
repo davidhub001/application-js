@@ -1,0 +1,49 @@
+<canvas id="myCanvas"></canvas>
+<style>
+    #myCanvas {
+        border: 1px solid black;
+    }
+
+</style>
+<script>
+    // Obtenez le canvas et son contexte
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+// Définir la position initiale de la souris
+var mouseX = 0;
+var mouseY = 0;
+
+// Ajouter un événement de souris pour détecter les clics
+canvas.addEventListener("mousedown", function(e) {
+  // Enregistrer la position initiale de la souris
+  mouseX = e.pageX - this.offsetLeft;
+  mouseY = e.pageY - this.offsetTop;
+
+  // Ajouter un événement de souris pour détecter le mouvement de la souris
+  canvas.addEventListener("mousemove", mousemove);
+});
+
+// Ajouter un événement de souris pour détecter les relâchements de clics
+canvas.addEventListener("mouseup", function() {
+  // Supprimer l'événement de souris pour détecter le mouvement de la souris
+  canvas.removeEventListener("mousemove", mousemove);
+});
+
+// Fonction pour dessiner la ligne
+function drawLine() {
+  ctx.beginPath();
+  ctx.moveTo(mouseX, mouseY);
+  ctx.lineTo(event.pageX - this.offsetLeft, event.pageY - this.offsetTop);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+// Fonction pour détecter le mouvement de la souris
+function mousemove(event) {
+  drawLine();
+  mouseX = event.pageX - this.offsetLeft;
+  mouseY = event.pageY - this.offsetTop;
+}
+
+</script>
