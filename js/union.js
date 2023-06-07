@@ -1,6 +1,7 @@
 var selector = document.querySelectorAll('.typewrite');
 selector.forEach(e => {
-    var content = e.getAttribute("content");
+    var content = e.innerHTML;
+    e.innerHTML = "";
     var length_content = content.length;
     var init = 0;
     function typewrite(){

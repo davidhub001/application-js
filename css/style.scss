@@ -125,7 +125,6 @@ div#css {
 body.content-page{
     background-color: #d7bcf7!important;
     color: #000000!important;
-    font-size: 18px;
     line-height: 26px;
     font-family: 'Whyte',Arial,Helvetica,sans-serif;
     margin: 0px 40px 0px 40px;
@@ -142,5 +141,17 @@ body.content-page{
         .br-#{$i}{
             border-radius: $i * 1%;
         }
+        .m-#{$i}{
+            margin: $i * 1%;
+        }
+        .f-#{$i}{
+            font-size: $i * 1%;
+        }
+    }
+    .dflex{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
