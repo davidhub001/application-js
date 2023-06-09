@@ -12,10 +12,11 @@
     <div class="header">
         <div class="nav1">
             <img src="image/logo.png" alt="" class="logo">
+            <h1 class="typewrite dnone">David ANDRIAMASINAVALONA</h1>
         </div>
         <div class="nav2"></div>
     </div>
-    <div id="calculatrice" class="deplacer">
+    <div id="calculatrice" class="deplacer m-1">
         <div class="_button">
             <input type="text" name="entrer" id="entrer">
             <button class="button">1</button>
@@ -38,7 +39,43 @@
             <button class="operation">-</button>
             <button class="operation">+</button>
         </div>
-    </div>      
+    </div>  
+    <div id="registre" class="deplacer p-1 w-50 m-1">
+        <div class="input">
+            <form class="form" input="nom,prenom,tel">
+                <label for="nom" class="w-26">Nom</label>
+                <input type="text" name="non" id="nom" placeholder="David"></br>
+                <label for="prenom" class="w-26">Prenom</label>
+                <input type="text" name="prenon" id="prenom" placeholder="ANDRIAMASINAVALONA"></br>
+                <label for="tel" class="w-26">Téléphone</label>
+                <input type="text" name="tel" id="tel" placeholder="+261 34 60 131 54"></br>
+                <button type="button" id="enregistrer" class="enregistrer">Enregistrer</button>
+            </form>
+        </div>
+        <div class="liste">
+            <table>
+                <thead class="titre"></thead>
+                <tbody class="liste-registre"></tbody>
+            </table>
+        </div>
+    </div> 
+    <div id="gestpanier" class="deplacer w-50 p-1 m-1">
+        <div class="produit">
+
+            <div class="prod1" id="prod1">
+                <span class="image-prod"></span>
+                <span class="prix">Prix:</span>
+                <span class="add_panier"><button type="button" class="add">Ajout au panier</button></span>
+            </div>
+
+            <div class="prod2" id="prod2">
+                <span class="image-prod"></span>
+                <span class="prix">Prix:</span>
+                <span class="add_panier"><button type="button" class="add">Ajout au panier</button></span>
+            </div>
+
+        </div>
+    </div>
     </div>
     <script src="js/calculat.js"></script>
     <script src="js/union.js"></script>
