@@ -155,3 +155,21 @@ body.content-page{
         justify-content: center;
     }
 }
+.header{
+    height: 100px;
+    margin: 0px -40px 40px -40px;
+    .nav1{
+        height: 80px;
+        background-color: rgba(0, 255, 255, 0.623);
+        padding: 0px 40px 0px 40px;
+    }
+    .nav2{
+        height: 50px;
+        background-color: rgb(0, 255, 255);
+        padding: 0px 40px 0px 40px;
+    }
+    .logo{
+        width: 100px;
+        height: 80px;
+    }
+}
