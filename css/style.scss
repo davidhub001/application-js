@@ -196,11 +196,11 @@ body.content-page{
     border: solid;
     
     .image-prod{
-        width: 100px;
+        width: auto;
         height: 90px;
         background-color: brown;
     }
-    .produit{
+    .produit-liste{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -208,6 +208,36 @@ body.content-page{
             display: flex;
             flex-direction: column;
             margin: 2px;
+        }
+        div{
+            border: 1px solid;
+        }
+        button {
+            background-color: #eb5e2b;
+            border: none;
+            color: white;
+            font-weight: bold;
+            &:hover{
+                background-color: #cc664191;
+            }
+        }
+    }
+    span#total-panier{
+        background-color: #f55f32;
+        padding: 1px;
+        border-radius: 50%;
+        width: 25px;
+        text-align: center;
+    }
+
+    #liste_produit{
+        background-color: #69a9a9;
+        width: 100%;
+        position: relative;
+        color: white;
+        font-weight: 700;
+        td {
+            width: 10%;
         }
     }
 }

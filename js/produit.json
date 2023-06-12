@@ -1,0 +1,32 @@
+[
+    {
+      "ref": "p_4",
+      "nom": "prod 4",
+      "prix": "254",
+      "stock": "20"
+    },
+    {
+      "ref": "p_3",
+      "nom": "prod 3",
+      "prix": "100",
+      "stock": "20"
+    },
+    {
+      "ref": "p_5",
+      "nom": "prod 5",
+      "prix": "2",
+      "stock": "2"
+    },
+    {
+        "ref": "p_6",
+        "nom": "prod 6",
+        "prix": "2",
+        "stock": "2"
+    },
+    {
+        "ref": "p_7",
+        "nom": "prod 7",
+        "prix": "2",
+        "stock": "2"
+    }
+]

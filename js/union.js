@@ -52,6 +52,7 @@ function get_storage(){
                 for(var i=0; i<e.length;i++){
                     tr += "<td>"+e[i]+"</td>";
                 }
+                tr+="<td><button>x</button></td>"
             tr += "</tr>"
         })
     }
