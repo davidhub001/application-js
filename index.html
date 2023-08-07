@@ -9,6 +9,7 @@
     <script src="js/deplace.js"></script>
 </head>
 <body class="content-page"> 
+
     <div class="header">
         <div class="nav1">
             <img src="image/logo.png" alt="" class="logo">
@@ -16,6 +17,26 @@
         </div>
         <div class="nav2"></div>
     </div>
+
+
+    <div id="keno" class="deplacer w-50 p-1 m-1">
+        <div class="headkeno">
+            <table>
+                <tr id="headerRow"></tr>
+            </table>
+            <button id="generate">Go</button>
+        </div>
+        <div class="tabkeno">
+            <table border="1" id="dataTable"></table>
+            <div>
+                <div id="valeur"></div>
+            </div>
+            
+        </div>
+        <div id="mise"></div>
+    </div>
+
+    
     <div id="calculatrice" class="deplacer m-1">
         <div class="_button">
             <input type="text" name="entrer" id="entrer">
@@ -71,9 +92,11 @@
         </div>
     </div>
 
+
     </div>
     <script src="js/calculat.js"></script>
     <script src="js/union.js"></script>
     <script src="js/produit.js"></script>
+    <script src="js/keno.js"></script>
 </body>
 </html>

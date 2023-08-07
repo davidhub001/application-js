@@ -244,3 +244,37 @@ body.content-page{
 .deplacer{
     cursor: pointer;
 }
+
+
+
+#keno{
+    background-color: #696560;
+    padding: 14px;
+
+    button {
+        width: 30px;
+    }
+    .none{
+        background-color: red;
+    }
+    .ok{
+        background-color: green;
+    }
+    .tabkeno {
+        display: flex;
+    }
+    div#valeur {
+        font-size: 25px;
+        background-color: antiquewhite;
+        border: solid;
+        border-radius: 100px;
+        padding: 15px;
+    }
+    div#mise {
+        font-size: 25px;
+    }
+    .headkeno {
+        display: flex;
+        justify-content: space-between;
+    }
+}
