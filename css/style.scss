@@ -133,7 +133,7 @@ body.content-page{
     }
     @for $i from 1 through 100{
         .w-#{$i}{
-            width: $i * 1%;
+            width: $i * 10px;
         }
         .h-#{$i}{
             height: $i * 1%;
