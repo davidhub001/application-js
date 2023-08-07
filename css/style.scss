@@ -272,6 +272,11 @@ body.content-page{
     }
     div#mise {
         font-size: 25px;
+        display: flex;
+        div{
+            padding: 5px;
+            margin: 5px;
+        }
     }
     .headkeno {
         display: flex;

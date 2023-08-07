@@ -82,15 +82,18 @@ const numSelected = 20;
 generate.onclick = function(){
     var kenoDraws = generateKenoNumbers(numDraws, minNumber, maxNumber, numSelected);
 
-    var arrayliste_element = [];
+    var arrayliste_element = "";
+
     var data_element = document.querySelectorAll("[val_selected=true]");
     data_element.forEach(function(chiffre){
-        arrayliste_element.push(chiffre.textContent);
+        arrayliste_element += "<div class='res_"+chiffre.textContent+"'>"+chiffre.textContent+"</div>";
+
         chiffre.classList.remove('none');
         chiffre.removeAttribute('disabled');
     })
     var mise =document.getElementById("mise");
-    mise.textContent = arrayliste_element.join(",");
+
+    mise.innerHTML = arrayliste_element;
 
         const delay = 500; // Délai entre chaque chiffre (en millisecondes)
         var numbers = kenoDraws[0]
@@ -101,11 +104,16 @@ generate.onclick = function(){
 
         function typeWriter() {
             if (numberIndex < numbers.length) {
-
-                var buttonval = document.getElementById(numbers[numberIndex]);
+                var e = numbers[numberIndex];
+                var buttonval = document.getElementById(e);
                 buttonval.classList.add("ok");
 
-                typewriterDiv.textContent = numbers[numberIndex];
+                var set_col = document.querySelectorAll('.res_'+e);
+                set_col.forEach(function(set){
+                    set.classList.add('none');
+                })
+
+                typewriterDiv.textContent = e;
                 numberIndex++;
                 setTimeout(typeWriter, delay);
             }
