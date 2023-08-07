@@ -1,6 +1,8 @@
 
 var generate = document.getElementById("generate");
 var ajouter_keno = document.getElementById("ajouter_keno");
+var flash_keno = document.getElementById("flash_keno");
+var mise =document.getElementById("mise");
 
 // Créer les boutons pour l'en-tête
 for (let i = 1; i <= 8; i++) {
@@ -86,7 +88,25 @@ ajouter_keno.onclick = function(){
         chiffre.removeAttribute('disabled');
     })
     arrayliste_element+= "</div>";
-    var mise =document.getElementById("mise");
+    mise.innerHTML = arrayliste_element;
+    button_select.forEach(button =>{
+        button.classList.remove("none");
+    })
+}
+flash_keno.onclick = function(){
+    arrayliste_element+= "<div>";
+    var cmpt = 0;
+    var i = document.querySelector("[selected_number=on]")
+    var flash = 0;
+    cmpt = i.textContent;
+    if(cmpt>0){
+        flash = generateKenoNumbers(1,1,80,cmpt)[0];
+    }
+    for(var o=0;o<flash.length;o++ ){
+        arrayliste_element += "<div class='res_"+flash[o]+"'>"+flash[o]+"</div>";
+    }
+    arrayliste_element+= "</div>";
+
     mise.innerHTML = arrayliste_element;
     button_select.forEach(button =>{
         button.classList.remove("none");
