@@ -273,9 +273,14 @@ body.content-page{
     div#mise {
         font-size: 25px;
         display: flex;
+        flex-direction: column;
         div{
-            padding: 5px;
-            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            div{
+                padding: 5px;
+                margin: 5px;
+            }   
         }
     }
     .headkeno {

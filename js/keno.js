@@ -1,5 +1,6 @@
 
 var generate = document.getElementById("generate");
+var ajouter_keno = document.getElementById("ajouter_keno");
 
 // Créer les boutons pour l'en-tête
 for (let i = 1; i <= 8; i++) {
@@ -26,8 +27,6 @@ button_select.forEach(button => {
         })
         
         generate.removeAttribute("class");
-        
-
         this.classList.add('none');
         this.setAttribute("value",this.textContent)
         this.setAttribute("selected_number",'on')
@@ -62,7 +61,6 @@ function setselected_number(num){
                 this.setAttribute("disabled","true");
                 this.setAttribute("val_selected","true");
                 generate.setAttribute("class","none");
-
                 this.classList.add("none");
                 nb_click++;
             }
@@ -78,23 +76,25 @@ const minNumber = 1;
 const maxNumber = 80;
 const numSelected = 20;
 
-
-generate.onclick = function(){
-    var kenoDraws = generateKenoNumbers(numDraws, minNumber, maxNumber, numSelected);
-
-    var arrayliste_element = "";
-
+var arrayliste_element = "";
+ajouter_keno.onclick = function(){
     var data_element = document.querySelectorAll("[val_selected=true]");
+    arrayliste_element+= "<div>";
     data_element.forEach(function(chiffre){
         arrayliste_element += "<div class='res_"+chiffre.textContent+"'>"+chiffre.textContent+"</div>";
-
         chiffre.classList.remove('none');
         chiffre.removeAttribute('disabled');
     })
+    arrayliste_element+= "</div>";
     var mise =document.getElementById("mise");
-
     mise.innerHTML = arrayliste_element;
+    button_select.forEach(button =>{
+        button.classList.remove("none");
+    })
+}
 
+generate.onclick = function(){
+    var kenoDraws = generateKenoNumbers(numDraws, minNumber, maxNumber, numSelected);
         const delay = 500; // Délai entre chaque chiffre (en millisecondes)
         var numbers = kenoDraws[0]
         shuffleArray(numbers);
@@ -120,6 +120,7 @@ generate.onclick = function(){
         }
 
         typeWriter();
+    arrayliste_element = "";
 
 }
 ////ici/////
@@ -129,6 +130,8 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+
 function generateKenoNumbers(numDraws, minNumber, maxNumber, numSelected) {
     // Vérifier les valeurs valides
     if (numDraws <= 0 || numSelected <= 0 || minNumber >= maxNumber) {
