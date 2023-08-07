@@ -92,7 +92,7 @@ generate.onclick = function(){
     var mise =document.getElementById("mise");
     mise.textContent = arrayliste_element.join(",");
 
-        const delay = 1000; // Délai entre chaque chiffre (en millisecondes)
+        const delay = 500; // Délai entre chaque chiffre (en millisecondes)
         var numbers = kenoDraws[0]
         shuffleArray(numbers);
         const typewriterDiv = document.getElementById('valeur');
