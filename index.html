@@ -18,6 +18,14 @@
         <div class="nav2"></div>
     </div>
 
+    <div id="chatgpt" class="deplacer w-46 p-1 m-1">
+        <div class="resultat_gpt" id="result_gpt">
+        </div>
+        <div>
+            <textarea class="w-45 m-1 hp-50" name="demande_chatgpt" id="demande_chatgpt" cols="30" rows="10" placeholder="Je peux vous aider?"></textarea>
+            <button id="send_chatgpt">Send</button>
+        </div>
+    </div>
 
     <div id="keno" class="deplacer w-46 p-1 m-1">
         <div class="headkeno">
@@ -63,6 +71,7 @@
             <button class="operation">+</button>
         </div>
     </div>  
+
     <div id="registre" class="deplacer p-1 w-50 m-1">
         <div class="input">
             <form class="form" input="nom,prenom,tel">
@@ -82,6 +91,7 @@
             </table>
         </div>
     </div> 
+
     <div id="gestpanier" class="deplacer w-50 p-1 m-1">
         <span id="total-panier"></span>
         <div id="liste_produit"></div>
@@ -95,7 +105,10 @@
     </div>
 
 
+    <div class="deplacer w-50 p-1 m-1">
+        <!-- 0329942819 -->
     </div>
+    <script src="js/chatgpt.js"></script>
     <script src="js/calculat.js"></script>
     <script src="js/union.js"></script>
     <script src="js/produit.js"></script>

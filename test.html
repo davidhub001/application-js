@@ -1,49 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracer un Rayon dans un Cercle</title>
+
+</head>
+<body>
 <canvas id="myCanvas"></canvas>
-<style>
-    #myCanvas {
-        border: 1px solid black;
-    }
-
-</style>
 <script>
-    // Obtenez le canvas et son contexte
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+  const canvas = document.getElementById('myCanvas');
+  const context = canvas.getContext('2d');
 
-// Définir la position initiale de la souris
-var mouseX = 0;
-var mouseY = 0;
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
+  const radius = 50;
+  const lineWidth = 2;
+  const circleColor = 'blue';
 
-// Ajouter un événement de souris pour détecter les clics
-canvas.addEventListener("mousedown", function(e) {
-  // Enregistrer la position initiale de la souris
-  mouseX = e.pageX - this.offsetLeft;
-  mouseY = e.pageY - this.offsetTop;
+  // Dessiner le cercle
+  context.beginPath();
+  context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+  context.lineWidth = lineWidth;
+  context.strokeStyle = circleColor;
+  context.stroke();
 
-  // Ajouter un événement de souris pour détecter le mouvement de la souris
-  canvas.addEventListener("mousemove", mousemove);
-});
+function rayon(context, angle){
+  var angleInRadians = (angle / 180) * Math.PI; // Angle en radians (45 degrés)
+  var endPointX = centerX + radius * Math.cos(angleInRadians);
+  var endPointY = centerY + radius * Math.sin(angleInRadians);
 
-// Ajouter un événement de souris pour détecter les relâchements de clics
-canvas.addEventListener("mouseup", function() {
-  // Supprimer l'événement de souris pour détecter le mouvement de la souris
-  canvas.removeEventListener("mousemove", mousemove);
-});
-
-// Fonction pour dessiner la ligne
-function drawLine() {
-  ctx.beginPath();
-  ctx.moveTo(mouseX, mouseY);
-  ctx.lineTo(event.pageX - this.offsetLeft, event.pageY - this.offsetTop);
-  ctx.stroke();
-  ctx.closePath();
+  context.beginPath();
+  context.moveTo(centerX, centerY);
+  context.lineTo(endPointX, endPointY);
+  context.stroke();
 }
-
-// Fonction pour détecter le mouvement de la souris
-function mousemove(event) {
-  drawLine();
-  mouseX = event.pageX - this.offsetLeft;
-  mouseY = event.pageY - this.offsetTop;
-}
-
+ 
 </script>
+</body>
+</html>

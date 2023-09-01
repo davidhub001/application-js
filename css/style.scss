@@ -138,6 +138,9 @@ body.content-page{
         .h-#{$i}{
             height: $i * 1%;
         }
+        .hp-#{$i}{
+            height: $i * 1px;
+        }
         .br-#{$i}{
             border-radius: $i * 1%;
         }
@@ -289,5 +292,23 @@ body.content-page{
     .headkeno {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+div#chatgpt {
+    background-color: #ada69d;
+    .resultat_gpt{
+        display: flex;
+        flex-direction: column;
+        .user{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .robot{
+            display: flex;
+            justify-content: flex-start;
+            background-color: #f7ce67;
+            color: brown;
+        }
     }
 }
