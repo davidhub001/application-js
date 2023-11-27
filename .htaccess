@@ -1,0 +1,4 @@
+# Définition des en-têtes de cache pour les fichiers JS
+<FilesMatch "\.(js)$">
+    Header set Cache-Control "max-age=1, public"
+</FilesMatch>

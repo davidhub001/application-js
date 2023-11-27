@@ -19,6 +19,9 @@
     <div id="text">
         andriamasinavalona davidson
     </div>
+    <div class="font-bilp test">
+        test
+    </div>
 </body>
 <script>
     $(document).ready(function(){

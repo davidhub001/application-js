@@ -4,6 +4,7 @@ $oswald :'Oswald-VariableFont_wght.ttf';
 $chelaone :'ChelaOne-Regular.ttf';
 $rubik: 'RubikDistressed-Regular.ttf';
 $oleo: 'OleoScript';
+$font-bilp: 'font-bilp.ttf';
 
 @font-face {
     font-family: 'font_1';
@@ -26,6 +27,14 @@ $oleo: 'OleoScript';
     font-family: 'font_5';
     src: url($url+$oleo+'-Regular.ttf');
 }
+@font-face {
+    font-family: 'font_bilp';
+    src: url($url+$font-bilp);
+}
+@font-face {
+    font-family: 'xxxx';
+    src: url($url+'font-bilp.woff2');
+}
 .rubik{
     font-family: font_3;
 }
@@ -40,4 +49,16 @@ $oleo: 'OleoScript';
 }
 .oleo-reg{
     font-family: font_5;
+}
+.font-bilp{
+    font-family: xxxx;
+    &::before{
+        content: "\f290";
+        font-family: xxxx;
+	    opacity: 0.5;
+	    font-weight: 400;
+        font-size: 100px;
+        color: red;
+    }
+   
 }
